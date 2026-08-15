@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: autodevai-platform
+    runtime: python
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+      - key: GEMINI_API_KEY
+        sync: false
