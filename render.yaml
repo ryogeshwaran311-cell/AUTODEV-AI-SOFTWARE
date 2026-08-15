@@ -1,4 +1,5 @@
 services:
+  # 1. AutoDevAI Platform (Main Engine)
   - type: web
     name: autodevai-platform
     runtime: python
@@ -13,3 +14,425 @@ services:
         value: "true"
       - key: GEMINI_API_KEY
         sync: false
+      - key: STORAGE_DIR
+        value: "projects"
+
+  # Independent App: build-calci
+  - type: web
+    name: build-calci-app
+    runtime: python
+    rootDir: projects/build-calci
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-calci-10
+  - type: web
+    name: build-calci-10-app
+    runtime: python
+    rootDir: projects/build-calci-10
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-calci-13
+  - type: web
+    name: build-calci-13-app
+    runtime: python
+    rootDir: projects/build-calci-13
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-calci-14
+  - type: web
+    name: build-calci-14-app
+    runtime: python
+    rootDir: projects/build-calci-14
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-calci-15
+  - type: web
+    name: build-calci-15-app
+    runtime: python
+    rootDir: projects/build-calci-15
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-calci-18
+  - type: web
+    name: build-calci-18-app
+    runtime: python
+    rootDir: projects/build-calci-18
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-calci-with-modern
+  - type: web
+    name: build-calci-with-modern-app
+    runtime: python
+    rootDir: projects/build-calci-with-modern
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-calci-with-modern-17
+  - type: web
+    name: build-calci-with-modern-17-app
+    runtime: python
+    rootDir: projects/build-calci-with-modern-17
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-library-management-system
+  - type: web
+    name: build-library-management-system-app
+    runtime: python
+    rootDir: projects/build-library-management-system
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-simple-book-library
+  - type: web
+    name: build-simple-book-library-app
+    runtime: python
+    rootDir: projects/build-simple-book-library
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: build-simple-crm-with
+  - type: web
+    name: build-simple-crm-with-app
+    runtime: python
+    rootDir: projects/build-simple-crm-with
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: calci
+  - type: web
+    name: calci-app
+    runtime: python
+    rootDir: projects/calci
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: calci-12
+  - type: web
+    name: calci-12-app
+    runtime: python
+    rootDir: projects/calci-12
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: create-calculator
+  - type: web
+    name: create-calculator-app
+    runtime: python
+    rootDir: projects/create-calculator
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: diag-test-run-001
+  - type: web
+    name: diag-test-run-001-app
+    runtime: python
+    rootDir: projects/diag-test-run-001
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: ecommerce-system
+  - type: web
+    name: ecommerce-system-app
+    runtime: python
+    rootDir: projects/ecommerce-system
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: simple-calculator
+  - type: web
+    name: simple-calculator-app
+    runtime: python
+    rootDir: projects/simple-calculator
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-10
+  - type: web
+    name: student-management-system-10-app
+    runtime: python
+    rootDir: projects/student-management-system-10
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-11
+  - type: web
+    name: student-management-system-11-app
+    runtime: python
+    rootDir: projects/student-management-system-11
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-12
+  - type: web
+    name: student-management-system-12-app
+    runtime: python
+    rootDir: projects/student-management-system-12
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-13
+  - type: web
+    name: student-management-system-13-app
+    runtime: python
+    rootDir: projects/student-management-system-13
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-14
+  - type: web
+    name: student-management-system-14-app
+    runtime: python
+    rootDir: projects/student-management-system-14
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-16
+  - type: web
+    name: student-management-system-16-app
+    runtime: python
+    rootDir: projects/student-management-system-16
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-4
+  - type: web
+    name: student-management-system-4-app
+    runtime: python
+    rootDir: projects/student-management-system-4
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-5
+  - type: web
+    name: student-management-system-5-app
+    runtime: python
+    rootDir: projects/student-management-system-5
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: student-management-system-6
+  - type: web
+    name: student-management-system-6-app
+    runtime: python
+    rootDir: projects/student-management-system-6
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: task-project-manager
+  - type: web
+    name: task-project-manager-app
+    runtime: python
+    rootDir: projects/task-project-manager
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"
+
+  # Independent App: task-project-manager-19
+  - type: web
+    name: task-project-manager-19-app
+    runtime: python
+    rootDir: projects/task-project-manager-19
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "true"

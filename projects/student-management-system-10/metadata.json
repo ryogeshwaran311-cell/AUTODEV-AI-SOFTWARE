@@ -1,0 +1,32 @@
+{
+  "slug": "student-management-system-10",
+  "project_name": "Student Management System",
+  "created_at": "2026-08-15T09:44:00.807149",
+  "file_count": 20,
+  "files": [
+    "backend\\requirements.txt",
+    "backend\\database.py",
+    "backend\\models.py",
+    "backend\\app.py",
+    "backend\\services\\__init__.py",
+    "frontend\\public\\favicon.svg",
+    "frontend\\public\\robots.txt",
+    "frontend\\package.json",
+    "frontend\\vite.config.js",
+    "frontend\\index.html",
+    "frontend\\src\\index.css",
+    "frontend\\src\\main.jsx",
+    "frontend\\src\\App.jsx",
+    "frontend\\src\\components\\Navbar.jsx",
+    "frontend\\src\\components\\Sidebar.jsx",
+    "frontend\\src\\components\\StatsCard.jsx",
+    "frontend\\src\\components\\DataTable.jsx",
+    "frontend\\src\\components\\ModalForm.jsx",
+    "vercel.json",
+    "render.yaml"
+  ],
+  "metadata": {
+    "name": "Student Management System",
+    "prompt": "Build a Student Management System with Admin Login, Student CRUD, Attendance Management, Search and Dashboard."
+  }
+}

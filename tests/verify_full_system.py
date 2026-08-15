@@ -13,7 +13,7 @@ from backend.services.deployment_service import deployment_service
 
 def test_full_system():
     print("=== 1. Testing Preview Service on create-calculator ===")
-    project_path = os.path.abspath(os.path.join(ROOT, "generated_projects", "create-calculator"))
+    project_path = os.path.abspath(os.path.join(ROOT, "projects", "create-calculator"))
     
     start_res = preview_service.start_preview(9999, project_path)
     print("Start Preview Result:", start_res)

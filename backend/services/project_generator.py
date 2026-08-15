@@ -13,8 +13,8 @@ class ProjectGenerator:
     Enforces path traversal safety and metadata tracking.
     """
 
-    def __init__(self, base_dir: str = "generated_projects"):
-        self.base_dir = os.path.abspath(base_dir)
+    def __init__(self, base_dir: str = None):
+        self.base_dir = os.path.abspath(base_dir or os.getenv("STORAGE_DIR", "projects"))
         os.makedirs(self.base_dir, exist_ok=True)
 
     def sanitize_slug(self, name: str) -> str:

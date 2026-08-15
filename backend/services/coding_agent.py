@@ -1565,7 +1565,8 @@ export default function ModalForm({ title, initialData, onClose, onSubmit }) {
         return f"""services:
   - type: web
     name: {slug}-app
-    env: python
+    runtime: python
+    rootDir: projects/{slug}
     buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
     startCommand: "python backend/app.py"
     envVars:

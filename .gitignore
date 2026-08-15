@@ -29,6 +29,11 @@ Thumbs.db
 .idea/
 
 # AutoDevAI workspace
+projects/*/node_modules/
+projects/*/.venv/
+projects/*/__pycache__/
+projects/*/dist/
+projects/*/*.db
 generated_projects/*/node_modules/
 generated_projects/*/.venv/
 generated_projects/*/__pycache__/
