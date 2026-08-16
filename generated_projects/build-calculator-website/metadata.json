@@ -1,0 +1,32 @@
+{
+  "slug": "build-calculator-website",
+  "project_name": "Build Calculator Website",
+  "created_at": "2026-08-15T17:12:47.313613",
+  "file_count": 20,
+  "files": [
+    "backend\\requirements.txt",
+    "backend\\database.py",
+    "backend\\models.py",
+    "backend\\app.py",
+    "backend\\services\\__init__.py",
+    "frontend\\public\\favicon.svg",
+    "frontend\\public\\robots.txt",
+    "frontend\\package.json",
+    "frontend\\vite.config.js",
+    "frontend\\index.html",
+    "frontend\\src\\index.css",
+    "frontend\\src\\main.jsx",
+    "frontend\\src\\App.jsx",
+    "frontend\\src\\components\\Navbar.jsx",
+    "frontend\\src\\components\\Sidebar.jsx",
+    "frontend\\src\\components\\StatsCard.jsx",
+    "frontend\\src\\components\\DataTable.jsx",
+    "frontend\\src\\components\\ModalForm.jsx",
+    "vercel.json",
+    "render.yaml"
+  ],
+  "metadata": {
+    "name": "Build Calculator Website",
+    "prompt": "build calculator website"
+  }
+}
