@@ -1,4 +1,4 @@
-import os
+﻿import os
 import json
 import logging
 import subprocess
@@ -146,7 +146,7 @@ class DeploymentService:
     def _sync_render_api(self, api_key: str, project_name: str, project_path: str) -> Dict[str, Any]:
         """Interacts directly with Render API to verify or trigger deployment."""
         headers = {
-            "Authorization": f"Bearer {api_key}",
+            "Authorization": "Bearer " + (os.getenv("RENDER_API_KEY") or api_key),
             "Accept": "application/json",
             "Content-Type": "application/json"
         }
@@ -293,3 +293,6 @@ class DeploymentService:
             }
 
 deployment_service = DeploymentService()
+
+
+
